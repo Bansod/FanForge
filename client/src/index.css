@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-text-gradient {
+  background: linear-gradient(270deg, #E50914, #FFD700, #3592b7, #FFD700, #E50914);
+  background-size: 600% 600%;
+  animation: gradientMove 10s linear infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@keyframes scrollDownUp {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(5rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-animation {
+  animation: scrollDownUp 7s infinite ease-in;
+}
+
+@keyframes zoomInOut {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.bg-zoom {
+  animation: zoomInOut 7s ease-in-out infinite;
+}
+
+.parallax-bg {
+  background-image: url('../src/assets/banner.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes slide-x {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(1200%);
+  }
+}
+
+@layer utilities {
+  .animate-slide-x {
+    animation: slide-x 4s linear infinite;
+  }
+}
