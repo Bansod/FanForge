@@ -154,8 +154,8 @@ const Carousel = ({ cards = [], tileCount }) => {
 
     if (tileCount === 0) {
         return (
-            <div className="w-full h-full flex flex-col items-center justify-center">
-                <h1 className="mt-4 text-black text-4xl font-bold uppercase">No products found</h1>
+            <div className="w-full h-full flex flex-col items-center md:justify-center justify-end">
+                <h1 className="text-black text-4xl font-bold uppercase text-center">No products found</h1>
                 <p>Try adjusting the filtres or refreshing the page.</p>
             </div>
         );
